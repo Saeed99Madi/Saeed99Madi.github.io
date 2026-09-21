@@ -1,0 +1,137 @@
+{
+  "meta": {
+    "title": "Said Madi — Software Engineer · AI Platforms",
+    "description": "Said Madi is a software engineer in Gaza, Palestine, building AI-native platforms and the cloud infrastructure they run on. Python, TypeScript, Kubernetes, AWS.",
+    "langName": "English",
+    "switchTo": "التبديل إلى العربية",
+    "switchLabel": "ع"
+  },
+  "nav": {
+    "about": "About",
+    "work": "Work",
+    "projects": "Projects",
+    "stack": "Stack",
+    "contact": "Contact",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "language": "Language",
+    "skipToContent": "Skip to content"
+  },
+  "hero": {
+    "location": "Gaza, Palestine",
+    "role": "Software Engineer",
+    "headline": "I build AI-native platforms and the cloud infrastructure they run on.",
+    "available": "Available for work",
+    "scroll": "Scroll",
+    "portraitAlt": "Portrait of Said Madi",
+    "tags": ["AI Platforms", "Full-Stack", "Cloud & Kubernetes", "LLM Orchestration"]
+  },
+  "about": {
+    "kicker": "About",
+    "title": "Engineering from Gaza, for teams anywhere.",
+    "paragraphs": [
+      "I am a software engineer working across the whole stack: the product surface people touch, the services behind it, and the cloud it runs on. Most of my current work is AI-native — LLM orchestration, retrieval, and the unglamorous plumbing that makes a model useful inside a real enterprise system.",
+      "I work remotely with distributed teams, and I have spent years teaching what I know — mentoring developers through Gaza Sky Geeks and running front-end training. Building from Gaza has made me pragmatic about constraints: unreliable power and connectivity are a good teacher for writing resilient systems."
+    ],
+    "stats": [
+      { "value": "2019", "label": "Shipping code since" },
+      { "value": "2", "label": "Platforms in production" },
+      { "value": "2", "label": "Languages spoken" }
+    ]
+  },
+  "work": {
+    "kicker": "Experience",
+    "title": "Where I work",
+    "roles": [
+      {
+        "period": "2025 — Present",
+        "title": "Software Engineer",
+        "org": "Metafore",
+        "meta": "Full-time · Remote",
+        "note": "AI-native enterprise platform. Building LLM orchestration and the services around it, on Kubernetes.",
+        "stack": ["Next.js", "Python", "FastAPI", "Kubernetes", "AWS EKS", "Keycloak", "gRPC", "Apache Camel"]
+      },
+      {
+        "period": "2025 — Present",
+        "title": "Co-Founder & Lead Engineer",
+        "org": "RenderForge",
+        "meta": "Part-time · Remote",
+        "note": "AI cloud rendering platform. Co-founded it and lead the engineering — product, infrastructure and the render pipeline.",
+        "stack": ["Next.js", "TypeScript", "PostgreSQL", "AWS", "GCP", "Kubernetes", "Blender", "DigitalOcean"]
+      },
+      {
+        "period": "2019 — Present",
+        "title": "Mentor & Trainer",
+        "org": "Gaza Sky Geeks · IEEE Club",
+        "meta": "Community",
+        "note": "Teaching web development fundamentals, React and Next.js — through cohort programmes and one-to-one sessions.",
+        "stack": ["React", "Next.js", "JavaScript", "TypeScript"]
+      }
+    ]
+  },
+  "projects": {
+    "kicker": "Selected work",
+    "title": "Things I have built",
+    "viewLabel": "View repository",
+    "liveLabel": "Live demo",
+    "starsLabel": "stars",
+    "items": [
+      {
+        "name": "MSS E-Commerce",
+        "year": "2023",
+        "summary": "A full e-commerce platform — storefront, admin and API — built end to end in TypeScript.",
+        "stack": ["Next.js", "Express", "React", "TypeScript", "PostgreSQL", "Sequelize"]
+      },
+      {
+        "name": "Next.js ChatGPT",
+        "year": "2025",
+        "summary": "A minimal AI agent in TypeScript: streaming chat, conversation state, deployed and public.",
+        "stack": ["Next.js", "TypeScript", "OpenAI API"]
+      },
+      {
+        "name": "Peace Seeker",
+        "year": "2026",
+        "summary": "A TypeScript project written this year — the most recent thing on my bench.",
+        "stack": ["TypeScript"]
+      },
+      {
+        "name": "Full-Stack Assignment",
+        "year": "2025",
+        "summary": "A production-quality brief taken seriously: clean, maintainable TypeScript across front and back end.",
+        "stack": ["TypeScript", "React", "Node.js"]
+      }
+    ]
+  },
+  "stack": {
+    "kicker": "Toolkit",
+    "title": "What I work with",
+    "groups": [
+      { "name": "Languages", "items": ["Python", "TypeScript", "JavaScript", "Java", "PHP"] },
+      { "name": "Frontend", "items": ["React", "Next.js", "Tailwind", "HTML", "CSS"] },
+      { "name": "Backend", "items": ["FastAPI", "Flask", "Node.js", "Express", "NestJS"] },
+      { "name": "Cloud & DevOps", "items": ["AWS", "Kubernetes", "Docker", "Linux", "GitHub Actions"] },
+      { "name": "Data", "items": ["PostgreSQL", "MongoDB", "Redis", "MySQL", "Kafka"] }
+    ],
+    "languagesTitle": "Spoken languages",
+    "languages": [
+      { "name": "Arabic", "level": "Native" },
+      { "name": "English", "level": "Professional" }
+    ]
+  },
+  "contact": {
+    "kicker": "Contact",
+    "title": "Let's build something.",
+    "body": "Open to full-stack and AI platform work — contract or full-time, remote. The fastest way to reach me is email.",
+    "emailLabel": "Email",
+    "githubLabel": "GitHub",
+    "linkedinLabel": "LinkedIn",
+    "upworkLabel": "Upwork",
+    "basedLabel": "Based in",
+    "location": "Gaza, Palestine"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "toTop": "Top",
+    "builtWith": "Built with React, TypeScript and MUI."
+  }
+}

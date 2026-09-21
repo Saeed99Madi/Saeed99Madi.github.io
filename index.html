@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+
+    <!--
+      CSP is delivered as a meta tag because GitHub Pages cannot set response
+      headers. Moving to a host that can (Netlify, Cloudflare) means moving this
+      to a real header and adding frame-ancestors + X-Content-Type-Options,
+      which meta tags cannot express.
+
+      style-src needs 'unsafe-inline': Emotion injects <style> elements at
+      runtime and a static host cannot mint per-request nonces. No third-party
+      origin is allowed at all — the fonts are self-hosted.
+    -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self';
+               script-src 'self';
+               style-src 'self' 'unsafe-inline';
+               img-src 'self' data:;
+               font-src 'self';
+               connect-src 'self';
+               form-action 'none';
+               base-uri 'self';
+               object-src 'none';
+               frame-src 'none';
+               manifest-src 'self';
+               upgrade-insecure-requests"
+    />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    <title>Said Madi — Software Engineer · AI Platforms</title>
+    <meta
+      name="description"
+      content="Said Madi is a software engineer in Gaza, Palestine, building AI-native platforms and the cloud infrastructure they run on. Python, TypeScript, Kubernetes, AWS."
+    />
+    <meta name="author" content="Said Madi" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+    <link rel="canonical" href="%VITE_SITE_URL%" />
+
+    <meta property="og:type" content="profile" />
+    <meta property="og:profile:first_name" content="Said" />
+    <meta property="og:profile:last_name" content="Madi" />
+    <meta property="og:site_name" content="Said Madi" />
+    <meta property="og:title" content="Said Madi — Software Engineer · AI Platforms" />
+    <meta
+      property="og:description"
+      content="Building AI-native platforms and the cloud infrastructure they run on. Gaza, Palestine."
+    />
+    <meta property="og:url" content="%VITE_SITE_URL%" />
+    <meta property="og:image" content="%VITE_SITE_URL%og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:secure_url" content="%VITE_SITE_URL%og.png" />
+    <meta property="og:image:alt" content="Said Madi — Software Engineer, Gaza, Palestine" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="ar_PS" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Said Madi — Software Engineer · AI Platforms" />
+    <meta
+      name="twitter:description"
+      content="Building AI-native platforms and the cloud infrastructure they run on. Gaza, Palestine."
+    />
+    <meta name="twitter:image" content="%VITE_SITE_URL%og.png" />
+    <meta name="twitter:image:alt" content="Said Madi — Software Engineer, Gaza, Palestine" />
+
+    <meta name="theme-color" content="#0E1013" />
+
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+    <link rel="manifest" href="./site.webmanifest" />
+
+    <!--
+      Self-hosted fonts, relative hrefs so the site works under any base path.
+      Only the two faces that paint the hero are preloaded; the Arabic and mono
+      faces load on demand via their unicode-range.
+    -->
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="./fonts/ibm-plex-sans-normal-600-latin.woff2" />
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="./fonts/ibm-plex-mono-normal-400-latin.woff2" />
+    <link rel="stylesheet" href="./fonts.css" />
+
+    <!--
+      Structured data. `sameAs` is the important part for SEO: it tells search
+      engines that this site, the GitHub account, the LinkedIn profile and the
+      Upwork profile are all the same person, so they consolidate into one
+      entity rather than competing for the same name.
+    -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Said Madi",
+        "alternateName": "سعيد ماضي",
+        "jobTitle": "Software Engineer",
+        "description": "Software engineer building AI-native platforms and cloud infrastructure.",
+        "email": "mailto:saed.dev9@gmail.com",
+        "url": "%VITE_SITE_URL%",
+        "image": "%VITE_SITE_URL%og.png",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Gaza",
+          "addressCountry": "PS"
+        },
+        "sameAs": [
+          "https://github.com/Saeed99Madi",
+          "https://www.linkedin.com/in/saedmadi/",
+          "https://www.upwork.com/freelancers/~01761b751cf50bf51d"
+        ],
+        "knowsLanguage": [
+          { "@type": "Language", "name": "Arabic", "alternateName": "ar" },
+          { "@type": "Language", "name": "English", "alternateName": "en" }
+        ],
+        "knowsAbout": [
+          "Artificial intelligence platforms",
+          "Large language model orchestration",
+          "Full-stack web development",
+          "Cloud infrastructure",
+          "Kubernetes",
+          "TypeScript",
+          "Python"
+        ],
+        "worksFor": [
+          { "@type": "Organization", "name": "Metafore" },
+          { "@type": "Organization", "name": "RenderForge" }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>
+      <div style="padding: 2rem; font-family: system-ui, sans-serif; line-height: 1.6; color: #eceae5; background: #0e1013">
+        <h1>Said Madi — Software Engineer</h1>
+        <p>
+          Building AI-native platforms and the cloud infrastructure they run on. Based in Gaza, Palestine.
+        </p>
+        <p>
+          Email <a href="mailto:saed.dev9@gmail.com" style="color: #e9a23b">saed.dev9@gmail.com</a> ·
+          <a href="https://github.com/Saeed99Madi" style="color: #e9a23b">GitHub</a> ·
+          <a href="https://www.linkedin.com/in/saedmadi/" style="color: #e9a23b">LinkedIn</a>
+        </p>
+        <p>This portfolio needs JavaScript enabled to display in full.</p>
+      </div>
+    </noscript>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

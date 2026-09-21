@@ -1,0 +1,32 @@
+/* Ground colour must match palette.base in src/theme.ts */
+:root {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #0e1013;
+  /* clip, not hidden: hidden would break every position: sticky on the page */
+  overflow-x: clip;
+}
+
+img {
+  max-width: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #16191e;
+}
+::-webkit-scrollbar-thumb {
+  background: #2c313a;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #e9a23b;
+}
