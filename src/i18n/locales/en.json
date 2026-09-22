@@ -16,7 +16,8 @@
     "closeMenu": "Close menu",
     "language": "Language",
     "skipToContent": "Skip to content",
-    "life": "Life"
+    "life": "Life",
+    "testimonials": "Reviews"
   },
   "hero": {
     "location": "Gaza, Palestine",
@@ -313,5 +314,15 @@
     "backHome": "Back to the portfolio",
     "metaTitle": "Life — Said Madi",
     "metaDescription": "Photographs and moments from the years behind the work — university in Gaza, Gaza Sky Geeks, teaching, the family farm, and now."
+  },
+  "testimonials": {
+    "kicker": "Client feedback",
+    "title": "What clients say",
+    "intro": "Verified reviews from completed Upwork contracts — a client cannot leave one without having hired and paid for the work.",
+    "ratingLabel": "out of 5",
+    "jobsLabel": "completed jobs",
+    "avgLabel": "average rating",
+    "verified": "Verified on Upwork",
+    "viewAll": "See all reviews on Upwork"
   }
 }

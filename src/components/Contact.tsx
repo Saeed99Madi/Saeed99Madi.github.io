@@ -30,7 +30,7 @@ export default function Contact() {
   return (
     <Section id="contact" labelledBy="contact-title" sx={{ bgcolor: palette.surface }}>
       <Reveal>
-        <Kicker index="05">{t('contact.kicker')}</Kicker>
+        <Kicker index="06">{t('contact.kicker')}</Kicker>
       </Reveal>
 
       <Reveal delay={0.06}>

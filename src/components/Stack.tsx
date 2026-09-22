@@ -24,7 +24,7 @@ export default function TechStack() {
       <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1.4fr 0.6fr' }, gap: { xs: 5, md: 7 } }}>
         <Box>
           <Reveal>
-            <Kicker index="04">{t('stack.kicker')}</Kicker>
+            <Kicker index="05">{t('stack.kicker')}</Kicker>
           </Reveal>
           <Reveal delay={0.06}>
             <Typography
