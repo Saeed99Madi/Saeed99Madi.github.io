@@ -59,6 +59,15 @@ export default function About() {
               ))}
             </Stack>
           </Reveal>
+
+          <Reveal delay={0.3}>
+            <Divider sx={{ my: { xs: 3.5, md: 5 } }} />
+            <Typography variant="overline" sx={{ color: palette.signal, display: 'block', mb: 1.5 }}>
+              {t('about.educationTitle')}
+            </Typography>
+            <Typography sx={{ fontWeight: 600, color: palette.paper }}>{t('about.degree')}</Typography>
+            <Typography sx={{ color: palette.muted, mt: 0.5 }}>{t('about.school')}</Typography>
+          </Reveal>
         </Box>
       </Box>
     </Section>

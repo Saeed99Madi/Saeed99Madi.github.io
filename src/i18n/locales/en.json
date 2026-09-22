@@ -36,7 +36,7 @@
     "title": "Engineering from Gaza, for teams anywhere.",
     "paragraphs": [
       "I am a software engineer working across the whole stack: the product surface people touch, the services behind it, and the cloud it runs on. Most of my current work is AI-native — LLM orchestration, retrieval, and the unglamorous plumbing that makes a model useful inside a real enterprise system.",
-      "I work remotely with distributed teams, and I have spent years teaching what I know — mentoring developers through Gaza Sky Geeks and running front-end training. Building from Gaza has made me pragmatic about constraints: unreliable power and connectivity are a good teacher for writing resilient systems."
+      "I work remotely with distributed teams and consult for clients across the US, and I have spent years teaching what I know — mentoring developers through Gaza Sky Geeks and running front-end training. Building from Gaza has made me pragmatic about constraints: unreliable power and connectivity are a good teacher for writing resilient systems."
     ],
     "stats": [
       {
@@ -51,7 +51,10 @@
         "value": "2",
         "label": "Languages spoken"
       }
-    ]
+    ],
+    "educationTitle": "Education",
+    "degree": "Computer Systems Engineering",
+    "school": "Al-Azhar University Gaza"
   },
   "work": {
     "kicker": "Experience",
