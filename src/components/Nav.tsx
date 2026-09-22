@@ -85,7 +85,7 @@ export default function Nav() {
             )}
           </Link>
 
-          <Stack direction="row" spacing={{ md: 2.5, lg: 3.5 }} sx={{ alignItems: 'center' }}>
+          <Stack direction="row" spacing={{ xs: 1.5, md: 2.5, lg: 3.5 }} sx={{ alignItems: 'center' }}>
             <Stack direction="row" spacing={{ md: 2.5, lg: 3.5 }} sx={{ display: { xs: 'none', md: 'flex' } }}>
               {sections.map((id) => (
                 <Link key={id} href={`#${id}`} underline="none" sx={navLink}>
@@ -119,7 +119,7 @@ export default function Nav() {
             <IconButton
               onClick={() => setOpen(true)}
               aria-label={t('nav.openMenu')}
-              sx={{ display: { xs: 'inline-flex', md: 'none' }, color: palette.paper, mx: -1 }}
+              sx={{ display: { xs: 'inline-flex', md: 'none' }, color: palette.paper, marginInlineEnd: -1 }}
             >
               <MenuIcon />
             </IconButton>
@@ -154,7 +154,7 @@ export default function Nav() {
             <Typography sx={{ fontFamily: isRtl ? fonts.arabic : fonts.mono, fontWeight: 600, fontSize: 15 }}>
               {isRtl ? profile.nameAr : profile.name}
             </Typography>
-            <IconButton onClick={() => setOpen(false)} aria-label={t('nav.closeMenu')} sx={{ color: palette.paper, mx: -1 }}>
+            <IconButton onClick={() => setOpen(false)} aria-label={t('nav.closeMenu')} sx={{ color: palette.paper, marginInlineEnd: -1 }}>
               <CloseIcon />
             </IconButton>
           </Stack>
