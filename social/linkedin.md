@@ -50,7 +50,7 @@ I'm based in Gaza, Palestine, and work remotely with distributed teams. Building
 
 Open to full-stack and AI platform work, contract or full-time, remote.
 
-saed.dev9@gmail.com · saeed99madi.github.io
+saed.dev9@gmail.com · saidmadi.com
 ```
 
 ---
@@ -94,7 +94,7 @@ Teaching web development fundamentals, React and Next.js through cohort programm
 Add these four, in this order. Featured is the only part of a profile
 people actually click.
 
-1. **saeed99madi.github.io** — your portfolio
+1. **saidmadi.com** — your portfolio
 2. **renderforge.ai** — the company you co-founded
 3. **peace-seekers.com** — the one with a story behind it
 4. **github.com/Saeed99Madi** — your code

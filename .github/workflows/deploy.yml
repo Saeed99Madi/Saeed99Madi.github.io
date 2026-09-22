@@ -29,7 +29,7 @@ jobs:
       - run: npm run build
         env:
           # Keep these in sync with .env. Change both when the site moves host.
-          VITE_SITE_URL: https://saeed99madi.github.io/
+          VITE_SITE_URL: https://saidmadi.com/
           BASE_PATH: /
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
