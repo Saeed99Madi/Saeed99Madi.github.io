@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
+import type { ParseKeys } from 'i18next'
 import { supportedLngs } from './index'
 
 /**
@@ -10,25 +11,38 @@ import { supportedLngs } from './index'
  * browser lay out the page right-to-left for Arabic, and what screen readers
  * use to announce text in the right order.
  */
-export function useDocumentLanguage() {
+interface DocumentLanguageOptions {
+  /**
+   * Locale keys for this page's title and description. Typed against the
+   * resources, so a key that does not exist is a compile error rather than a
+   * blank <title> in production.
+   */
+  titleKey?: ParseKeys
+  descriptionKey?: ParseKeys
+}
+
+export function useDocumentLanguage({
+  titleKey = 'meta.title',
+  descriptionKey = 'meta.description',
+}: DocumentLanguageOptions = {}) {
   const { t, i18n } = useTranslation()
 
   useEffect(() => {
     const lang = i18n.resolvedLanguage ?? i18n.language
     document.documentElement.lang = lang
     document.documentElement.dir = i18n.dir(lang)
-    document.title = t('meta.title')
+    document.title = t(titleKey)
 
-    const description = t('meta.description')
+    const description = t(descriptionKey)
     const setMeta = (selector: string, value: string) => {
       const el = document.querySelector<HTMLMetaElement>(selector)
       if (el) el.content = value
     }
     setMeta('meta[name="description"]', description)
     setMeta('meta[property="og:description"]', description)
-    setMeta('meta[property="og:title"]', t('meta.title'))
+    setMeta('meta[property="og:title"]', t(titleKey))
     setMeta('meta[property="og:locale"]', lang === 'ar' ? 'ar_PS' : 'en_US')
-  }, [t, i18n, i18n.resolvedLanguage])
+  }, [t, i18n, i18n.resolvedLanguage, titleKey, descriptionKey])
 
   // hreflang alternates depend on the deployed URL, so they are written once.
   useEffect(() => {

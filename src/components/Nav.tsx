@@ -10,7 +10,7 @@ import MenuIcon from '@mui/icons-material/MenuRounded'
 import CloseIcon from '@mui/icons-material/CloseRounded'
 import { useTranslation } from 'react-i18next'
 import { palette, line, fonts } from '../theme'
-import { profile, sections } from '../config'
+import { profile, sections, pages } from '../config'
 import LanguageSwitcher from './LanguageSwitcher'
 import WhatsAppIcon from '@mui/icons-material/WhatsApp'
 import { useWhatsAppHref } from '../useWhatsApp'
@@ -92,6 +92,11 @@ export default function Nav() {
                   {t(`nav.${id}` as const)}
                 </Link>
               ))}
+              {pages.map((page) => (
+                <Link key={page.key} href={page.href} underline="none" sx={navLink}>
+                  {t(`nav.${page.key}` as const)}
+                </Link>
+              ))}
             </Stack>
 
             <LanguageSwitcher />
@@ -155,10 +160,10 @@ export default function Nav() {
           </Stack>
 
           <Stack component="nav" spacing={0.5}>
-            {sections.map((id) => (
+            {[...sections.map((id) => ({ key: id, href: `#${id}` })), ...pages].map(({ key: id, href }) => (
               <Link
                 key={id}
-                href={`#${id}`}
+                href={href}
                 onClick={() => setOpen(false)}
                 underline="none"
                 sx={{

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self';
+               script-src 'self';
+               style-src 'self' 'unsafe-inline';
+               img-src 'self' data:;
+               font-src 'self';
+               connect-src 'self';
+               form-action 'none';
+               base-uri 'self';
+               object-src 'none';
+               frame-src 'none';
+               manifest-src 'self';
+               upgrade-insecure-requests"
+    />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    <title>Life — Said Madi</title>
+    <meta
+      name="description"
+      content="Photographs and moments from the years behind the work — university in Gaza, Gaza Sky Geeks, teaching, the family farm, and now."
+    />
+    <meta name="author" content="Said Madi" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <link rel="canonical" href="%VITE_SITE_URL%life/" />
+
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Said Madi" />
+    <meta property="og:title" content="Life — Said Madi" />
+    <meta
+      property="og:description"
+      content="Photographs and moments from the years behind the work."
+    />
+    <meta property="og:url" content="%VITE_SITE_URL%life/" />
+    <meta property="og:image" content="%VITE_SITE_URL%og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="%VITE_SITE_URL%og.png" />
+
+    <meta name="theme-color" content="#0E1013" />
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="../fonts/ibm-plex-sans-normal-600-latin.woff2" />
+    <link rel="stylesheet" href="../fonts.css" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>
+      <div style="padding: 2rem; font-family: system-ui, sans-serif; line-height: 1.6; color: #eceae5; background: #0e1013">
+        <h1>Life — Said Madi</h1>
+        <p>Photographs and moments from the years behind the work.</p>
+        <p><a href="../" style="color: #e9a23b">Back to the portfolio</a></p>
+      </div>
+    </noscript>
+    <script type="module" src="/src/life-main.tsx"></script>
+  </body>
+</html>

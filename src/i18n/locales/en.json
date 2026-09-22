@@ -15,7 +15,8 @@
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
     "language": "Language",
-    "skipToContent": "Skip to content"
+    "skipToContent": "Skip to content",
+    "life": "Life"
   },
   "hero": {
     "location": "Gaza, Palestine",
@@ -260,5 +261,57 @@
     "rights": "All rights reserved.",
     "toTop": "Top",
     "builtWith": "Built with React, TypeScript and MUI."
+  },
+  "life": {
+    "kicker": "Life",
+    "title": "The road here",
+    "intro": "Photographs from the years behind the work — where things started and what they turned into.",
+    "altPrefix": "Photo from",
+    "entries": [
+      {
+        "title": "University, and the friends I found there",
+        "caption": "My first days at university, where I met the friends who mattered. The best of them was Yasser Arafat Al-Tartouri. He was killed in the war."
+      },
+      {
+        "title": "Where it really started",
+        "caption": "The day I went and rented a desk at the Gaza Sky Geeks coworking space. That is where my real programming journey began."
+      },
+      {
+        "title": "GSG Code Academy",
+        "caption": "I took the Full-Stack JavaScript Engineering training at the GSG Code Academy."
+      },
+      {
+        "title": "From trainee to instructor",
+        "caption": "After finishing the training I came back as a Full-Stack instructor, teaching four trainees of my own — C.A-Team 7, June 2023."
+      },
+      {
+        "title": "Good times at the GSG workspace",
+        "caption": "Beautiful moments at the Gaza Sky Geeks workspace — the corridor, the coffee table, the desks, and a day at the beach with everyone."
+      },
+      {
+        "title": "Nature, animals, and the family farm",
+        "caption": "Away from the screen: I love nature and animals, and the family farm is where I go back to."
+      },
+      {
+        "title": "Green places",
+        "caption": "I always find all my inspiration in green places — the ones taken from us after the war."
+      },
+      {
+        "title": "Sport is life",
+        "caption": "Sport is life."
+      },
+      {
+        "title": "Vladimir",
+        "caption": "I had a pet, and his name was Vladimir. 😄"
+      },
+      {
+        "title": "Where I am now",
+        "caption": "And now I am displaced, living in Deir al-Balah — in Al-Zawayda."
+      }
+    ],
+    "nowLabel": "Now",
+    "backHome": "Back to the portfolio",
+    "metaTitle": "Life — Said Madi",
+    "metaDescription": "Photographs and moments from the years behind the work — university in Gaza, Gaza Sky Geeks, teaching, the family farm, and now."
   }
 }

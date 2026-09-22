@@ -38,3 +38,6 @@ export const projectLinks: { live: string | null; repo: string | null; stars: nu
 ]
 
 export const sections = ['about', 'work', 'projects', 'contact'] as const
+
+/** Separate pages, linked from the nav alongside the in-page sections. */
+export const pages = [{ key: 'life', href: 'life/' }] as const
