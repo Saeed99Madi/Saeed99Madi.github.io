@@ -22,7 +22,12 @@ void i18n
     nonExplicitSupportedLngs: true,
     load: 'languageOnly',
     detection: {
-      order: ['querystring', 'localStorage', 'navigator', 'htmlTag'],
+      // English is the default for everyone. `navigator` is deliberately NOT
+      // in this list: most visitors are recruiters and clients reading in
+      // English, and an Arabic-locale browser was silently landing them on the
+      // Arabic version. Arabic is now opt-in, via ?lang=ar or the switcher,
+      // and the choice sticks in localStorage afterwards.
+      order: ['querystring', 'localStorage', 'htmlTag'],
       lookupQuerystring: 'lang',
       lookupLocalStorage: 'sm-lang',
       caches: ['localStorage'],
