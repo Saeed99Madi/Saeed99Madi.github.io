@@ -208,7 +208,7 @@ export default function Hero() {
             <Box
               sx={{
                 position: 'relative',
-                aspectRatio: '899 / 1200',
+                aspectRatio: '3 / 4',
                 overflow: 'hidden',
                 borderRadius: 1,
                 bgcolor: palette.surface,
@@ -220,7 +220,7 @@ export default function Hero() {
                 component="img"
                 src={profile.portrait}
                 alt={t('hero.portraitAlt')}
-                width={899}
+                width={900}
                 height={1200}
                 fetchPriority="high"
                 sx={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
