@@ -31,7 +31,7 @@ jobs:
           # Keep these in sync with .env. Change both when the site moves host.
           VITE_SITE_URL: https://saidmadi.com/
           BASE_PATH: /
-      - uses: actions/configure-pages@v5
+      - uses: actions/configure-pages@v6
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
