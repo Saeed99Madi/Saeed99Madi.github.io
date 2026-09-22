@@ -14,6 +14,7 @@ import gsgCorridor from './assets/life/gsg-corridor.jpg'
 import gsgCoffeeTable from './assets/life/gsg-coffee-table.jpg'
 import gsgDesks from './assets/life/gsg-desks.jpg'
 import gsgBeachDay from './assets/life/gsg-beach-day.jpg'
+import metaforeTeam from './assets/life/metafore-team.jpg'
 
 /**
  * The Life page: a personal timeline, separate from the professional sections.
@@ -65,6 +66,7 @@ export const lifeEntries: LifeEntry[] = [
       { src: gsgBeachDay, width: 1079, height: 1079 },
     ],
   },
+  { images: [{ src: metaforeTeam, width: 1200, height: 900 }], year: '2025' },
   { images: [{ src: familyFarm, width: 1200, height: 675 }] },
   {
     images: [
