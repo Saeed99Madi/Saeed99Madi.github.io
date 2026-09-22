@@ -24,7 +24,12 @@
     "available": "متاح للعمل",
     "scroll": "مرِّر",
     "portraitAlt": "صورة سعيد ماضي",
-    "tags": ["منصّات الذكاء الاصطناعي", "تطوير متكامل", "السحابة وكوبرنيتس", "تنسيق النماذج اللغوية"]
+    "tags": [
+      "منصّات الذكاء الاصطناعي",
+      "تطوير متكامل",
+      "السحابة وكوبرنيتس",
+      "تنسيق النماذج اللغوية"
+    ]
   },
   "about": {
     "kicker": "نبذة",
@@ -34,9 +39,18 @@
       "أعمل عن بُعد مع فرق موزّعة، وقضيت سنوات في تعليم ما أعرفه — إرشاد المطوّرين عبر Gaza Sky Geeks وتقديم تدريبات في تطوير الواجهات. البناء من غزة جعلني عمليًا في التعامل مع القيود: انقطاع الكهرباء وضعف الاتصال معلّمان جيدان لكتابة أنظمة صامدة."
     ],
     "stats": [
-      { "value": "2019", "label": "أكتب الشيفرة منذ" },
-      { "value": "2", "label": "منصّتان في الإنتاج" },
-      { "value": "2", "label": "لغتان أتحدّثهما" }
+      {
+        "value": "2019",
+        "label": "أكتب الشيفرة منذ"
+      },
+      {
+        "value": "2",
+        "label": "منصّتان في الإنتاج"
+      },
+      {
+        "value": "2",
+        "label": "لغتان أتحدّثهما"
+      }
     ]
   },
   "work": {
@@ -49,7 +63,16 @@
         "org": "Metafore",
         "meta": "دوام كامل · عن بُعد",
         "note": "منصّة مؤسسية قائمة على الذكاء الاصطناعي. أبني تنسيق النماذج اللغوية والخدمات المحيطة به، فوق كوبرنيتس.",
-        "stack": ["Next.js", "Python", "FastAPI", "Kubernetes", "AWS EKS", "Keycloak", "gRPC", "Apache Camel"]
+        "stack": [
+          "Next.js",
+          "Python",
+          "FastAPI",
+          "Kubernetes",
+          "AWS EKS",
+          "Keycloak",
+          "gRPC",
+          "Apache Camel"
+        ]
       },
       {
         "period": "2025 — حتى الآن",
@@ -57,7 +80,16 @@
         "org": "RenderForge",
         "meta": "دوام جزئي · عن بُعد",
         "note": "منصّة سحابية للمعالجة الرسومية بالذكاء الاصطناعي. شاركتُ في تأسيسها وأقود هندستها — المنتج والبنية التحتية ومسار المعالجة.",
-        "stack": ["Next.js", "TypeScript", "PostgreSQL", "AWS", "GCP", "Kubernetes", "Blender", "DigitalOcean"]
+        "stack": [
+          "Next.js",
+          "TypeScript",
+          "PostgreSQL",
+          "AWS",
+          "GCP",
+          "Kubernetes",
+          "Blender",
+          "DigitalOcean"
+        ]
       },
       {
         "period": "2019 — حتى الآن",
@@ -65,40 +97,78 @@
         "org": "Gaza Sky Geeks · نادي IEEE",
         "meta": "مجتمعي",
         "note": "تدريس أساسيات تطوير الويب وReact وNext.js — عبر برامج تدريبية وجلسات فردية.",
-        "stack": ["React", "Next.js", "JavaScript", "TypeScript"]
+        "stack": [
+          "React",
+          "Next.js",
+          "JavaScript",
+          "TypeScript"
+        ]
       }
     ]
   },
   "projects": {
     "kicker": "أعمال مختارة",
-    "title": "أشياء بنيتُها",
-    "viewLabel": "عرض المستودع",
-    "liveLabel": "تجربة مباشرة",
+    "title": "منتجات ومشاريع على الهواء",
+    "viewLabel": "الشيفرة",
+    "liveLabel": "زيارة الموقع",
     "starsLabel": "نجمة",
     "items": [
+      {
+        "name": "RenderForge",
+        "year": "2025 — الآن",
+        "summary": "معالجة رسومية سحابية لأعمال ثلاثية الأبعاد، مُسرَّعة بالذكاء الاصطناعي. شاركتُ في تأسيسها وأقود هندستها — المنتج والبنية التحتية ومسار المعالجة.",
+        "stack": [
+          "Next.js",
+          "TypeScript",
+          "PostgreSQL",
+          "AWS",
+          "GCP",
+          "Kubernetes",
+          "Blender"
+        ]
+      },
+      {
+        "name": "Peace Seekers",
+        "year": "2026",
+        "summary": "مساحة لإضافة صوتك من أجل السلام — من أي بلد، وأي دين، وأي طرف في أي نزاع. دون حساب، وفي أقل من دقيقة.",
+        "stack": [
+          "TypeScript"
+        ]
+      },
+      {
+        "name": "Plan & Volt — PV Yourself",
+        "year": "2025",
+        "summary": "منصّة ألمانية للطاقة الشمسية: أنظمة كهروضوئية وبطاريات تخزين وشواحن جدارية وصيانة، مع طلب المكوّنات مباشرةً من الجملة.",
+        "stack": []
+      },
+      {
+        "name": "Value Studio",
+        "year": "2025",
+        "summary": "موقع لاستوديو عمارة وتصميم داخلي، يعرض أعماله السكنية والتجارية.",
+        "stack": []
+      },
       {
         "name": "MSS E-Commerce",
         "year": "2023",
         "summary": "منصّة تجارة إلكترونية متكاملة — متجر ولوحة تحكّم وواجهة برمجية — مبنية بالكامل بتايب سكريبت.",
-        "stack": ["Next.js", "Express", "React", "TypeScript", "PostgreSQL", "Sequelize"]
+        "stack": [
+          "Next.js",
+          "Express",
+          "React",
+          "TypeScript",
+          "PostgreSQL",
+          "Sequelize"
+        ]
       },
       {
         "name": "Next.js ChatGPT",
         "year": "2025",
         "summary": "وكيل ذكاء اصطناعي مُبسّط بتايب سكريبت: محادثة متدفّقة، وحفظ لسياق الحوار، منشور ومتاح للجميع.",
-        "stack": ["Next.js", "TypeScript", "OpenAI API"]
-      },
-      {
-        "name": "Peace Seeker",
-        "year": "2026",
-        "summary": "مشروع بتايب سكريبت كتبتُه هذا العام — أحدث ما على طاولتي.",
-        "stack": ["TypeScript"]
-      },
-      {
-        "name": "Full-Stack Assignment",
-        "year": "2025",
-        "summary": "مهمة بمستوى الإنتاج أخذتُها على محمل الجد: شيفرة تايب سكريبت نظيفة وقابلة للصيانة في الواجهة والخادم.",
-        "stack": ["TypeScript", "React", "Node.js"]
+        "stack": [
+          "Next.js",
+          "TypeScript",
+          "OpenAI API"
+        ]
       }
     ]
   },
@@ -106,16 +176,67 @@
     "kicker": "الأدوات",
     "title": "ما أعمل به",
     "groups": [
-      { "name": "لغات البرمجة", "items": ["Python", "TypeScript", "JavaScript", "Java", "PHP"] },
-      { "name": "الواجهات الأمامية", "items": ["React", "Next.js", "Tailwind", "HTML", "CSS"] },
-      { "name": "الخدمات الخلفية", "items": ["FastAPI", "Flask", "Node.js", "Express", "NestJS"] },
-      { "name": "السحابة والتشغيل", "items": ["AWS", "Kubernetes", "Docker", "Linux", "GitHub Actions"] },
-      { "name": "البيانات", "items": ["PostgreSQL", "MongoDB", "Redis", "MySQL", "Kafka"] }
+      {
+        "name": "لغات البرمجة",
+        "items": [
+          "Python",
+          "TypeScript",
+          "JavaScript",
+          "Java",
+          "PHP"
+        ]
+      },
+      {
+        "name": "الواجهات الأمامية",
+        "items": [
+          "React",
+          "Next.js",
+          "Tailwind",
+          "HTML",
+          "CSS"
+        ]
+      },
+      {
+        "name": "الخدمات الخلفية",
+        "items": [
+          "FastAPI",
+          "Flask",
+          "Node.js",
+          "Express",
+          "NestJS"
+        ]
+      },
+      {
+        "name": "السحابة والتشغيل",
+        "items": [
+          "AWS",
+          "Kubernetes",
+          "Docker",
+          "Linux",
+          "GitHub Actions"
+        ]
+      },
+      {
+        "name": "البيانات",
+        "items": [
+          "PostgreSQL",
+          "MongoDB",
+          "Redis",
+          "MySQL",
+          "Kafka"
+        ]
+      }
     ],
     "languagesTitle": "اللغات",
     "languages": [
-      { "name": "العربية", "level": "اللغة الأم" },
-      { "name": "الإنجليزية", "level": "مستوى مهني" }
+      {
+        "name": "العربية",
+        "level": "اللغة الأم"
+      },
+      {
+        "name": "الإنجليزية",
+        "level": "مستوى مهني"
+      }
     ]
   },
   "contact": {
@@ -127,7 +248,10 @@
     "linkedinLabel": "LinkedIn",
     "upworkLabel": "Upwork",
     "basedLabel": "مقيم في",
-    "location": "غزة، فلسطين"
+    "location": "غزة، فلسطين",
+    "phoneLabel": "الهاتف",
+    "whatsappLabel": "واتساب",
+    "whatsappMessage": "مرحبًا سعيد، اطّلعتُ على موقعك وأودّ التحدّث بشأن مشروع."
   },
   "footer": {
     "rights": "جميع الحقوق محفوظة.",

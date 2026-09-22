@@ -4,7 +4,7 @@
     "description": "Said Madi is a software engineer in Gaza, Palestine, building AI-native platforms and the cloud infrastructure they run on. Python, TypeScript, Kubernetes, AWS.",
     "langName": "English",
     "switchTo": "التبديل إلى العربية",
-    "switchLabel": "ع"
+    "switchLabel": "AR"
   },
   "nav": {
     "about": "About",
@@ -24,7 +24,12 @@
     "available": "Available for work",
     "scroll": "Scroll",
     "portraitAlt": "Portrait of Said Madi",
-    "tags": ["AI Platforms", "Full-Stack", "Cloud & Kubernetes", "LLM Orchestration"]
+    "tags": [
+      "AI Platforms",
+      "Full-Stack",
+      "Cloud & Kubernetes",
+      "LLM Orchestration"
+    ]
   },
   "about": {
     "kicker": "About",
@@ -34,9 +39,18 @@
       "I work remotely with distributed teams, and I have spent years teaching what I know — mentoring developers through Gaza Sky Geeks and running front-end training. Building from Gaza has made me pragmatic about constraints: unreliable power and connectivity are a good teacher for writing resilient systems."
     ],
     "stats": [
-      { "value": "2019", "label": "Shipping code since" },
-      { "value": "2", "label": "Platforms in production" },
-      { "value": "2", "label": "Languages spoken" }
+      {
+        "value": "2019",
+        "label": "Shipping code since"
+      },
+      {
+        "value": "2",
+        "label": "Platforms in production"
+      },
+      {
+        "value": "2",
+        "label": "Languages spoken"
+      }
     ]
   },
   "work": {
@@ -49,7 +63,16 @@
         "org": "Metafore",
         "meta": "Full-time · Remote",
         "note": "AI-native enterprise platform. Building LLM orchestration and the services around it, on Kubernetes.",
-        "stack": ["Next.js", "Python", "FastAPI", "Kubernetes", "AWS EKS", "Keycloak", "gRPC", "Apache Camel"]
+        "stack": [
+          "Next.js",
+          "Python",
+          "FastAPI",
+          "Kubernetes",
+          "AWS EKS",
+          "Keycloak",
+          "gRPC",
+          "Apache Camel"
+        ]
       },
       {
         "period": "2025 — Present",
@@ -57,7 +80,16 @@
         "org": "RenderForge",
         "meta": "Part-time · Remote",
         "note": "AI cloud rendering platform. Co-founded it and lead the engineering — product, infrastructure and the render pipeline.",
-        "stack": ["Next.js", "TypeScript", "PostgreSQL", "AWS", "GCP", "Kubernetes", "Blender", "DigitalOcean"]
+        "stack": [
+          "Next.js",
+          "TypeScript",
+          "PostgreSQL",
+          "AWS",
+          "GCP",
+          "Kubernetes",
+          "Blender",
+          "DigitalOcean"
+        ]
       },
       {
         "period": "2019 — Present",
@@ -65,40 +97,78 @@
         "org": "Gaza Sky Geeks · IEEE Club",
         "meta": "Community",
         "note": "Teaching web development fundamentals, React and Next.js — through cohort programmes and one-to-one sessions.",
-        "stack": ["React", "Next.js", "JavaScript", "TypeScript"]
+        "stack": [
+          "React",
+          "Next.js",
+          "JavaScript",
+          "TypeScript"
+        ]
       }
     ]
   },
   "projects": {
     "kicker": "Selected work",
-    "title": "Things I have built",
-    "viewLabel": "View repository",
-    "liveLabel": "Live demo",
+    "title": "Live products and projects",
+    "viewLabel": "Source",
+    "liveLabel": "Visit site",
     "starsLabel": "stars",
     "items": [
+      {
+        "name": "RenderForge",
+        "year": "2025 — now",
+        "summary": "Cloud rendering for 3D work, accelerated by AI. I co-founded it and lead the engineering — product, infrastructure and the render pipeline.",
+        "stack": [
+          "Next.js",
+          "TypeScript",
+          "PostgreSQL",
+          "AWS",
+          "GCP",
+          "Kubernetes",
+          "Blender"
+        ]
+      },
+      {
+        "name": "Peace Seekers",
+        "year": "2026",
+        "summary": "A place to add your voice for peace — from any country, any faith, any side of a conflict. No account needed, and it takes under a minute.",
+        "stack": [
+          "TypeScript"
+        ]
+      },
+      {
+        "name": "Plan & Volt — PV Yourself",
+        "year": "2025",
+        "summary": "A German solar platform: photovoltaic systems, storage, wallboxes and maintenance, with components ordered direct from wholesale.",
+        "stack": []
+      },
+      {
+        "name": "Value Studio",
+        "year": "2025",
+        "summary": "Site for an architecture and interior design studio, showcasing residential and commercial work.",
+        "stack": []
+      },
       {
         "name": "MSS E-Commerce",
         "year": "2023",
         "summary": "A full e-commerce platform — storefront, admin and API — built end to end in TypeScript.",
-        "stack": ["Next.js", "Express", "React", "TypeScript", "PostgreSQL", "Sequelize"]
+        "stack": [
+          "Next.js",
+          "Express",
+          "React",
+          "TypeScript",
+          "PostgreSQL",
+          "Sequelize"
+        ]
       },
       {
         "name": "Next.js ChatGPT",
         "year": "2025",
         "summary": "A minimal AI agent in TypeScript: streaming chat, conversation state, deployed and public.",
-        "stack": ["Next.js", "TypeScript", "OpenAI API"]
-      },
-      {
-        "name": "Peace Seeker",
-        "year": "2026",
-        "summary": "A TypeScript project written this year — the most recent thing on my bench.",
-        "stack": ["TypeScript"]
-      },
-      {
-        "name": "Full-Stack Assignment",
-        "year": "2025",
-        "summary": "A production-quality brief taken seriously: clean, maintainable TypeScript across front and back end.",
-        "stack": ["TypeScript", "React", "Node.js"]
+        "stack": [
+          "Next.js",
+          "TypeScript",
+          "OpenAI API"
+        ]
       }
     ]
   },
@@ -106,16 +176,67 @@
     "kicker": "Toolkit",
     "title": "What I work with",
     "groups": [
-      { "name": "Languages", "items": ["Python", "TypeScript", "JavaScript", "Java", "PHP"] },
-      { "name": "Frontend", "items": ["React", "Next.js", "Tailwind", "HTML", "CSS"] },
-      { "name": "Backend", "items": ["FastAPI", "Flask", "Node.js", "Express", "NestJS"] },
-      { "name": "Cloud & DevOps", "items": ["AWS", "Kubernetes", "Docker", "Linux", "GitHub Actions"] },
-      { "name": "Data", "items": ["PostgreSQL", "MongoDB", "Redis", "MySQL", "Kafka"] }
+      {
+        "name": "Languages",
+        "items": [
+          "Python",
+          "TypeScript",
+          "JavaScript",
+          "Java",
+          "PHP"
+        ]
+      },
+      {
+        "name": "Frontend",
+        "items": [
+          "React",
+          "Next.js",
+          "Tailwind",
+          "HTML",
+          "CSS"
+        ]
+      },
+      {
+        "name": "Backend",
+        "items": [
+          "FastAPI",
+          "Flask",
+          "Node.js",
+          "Express",
+          "NestJS"
+        ]
+      },
+      {
+        "name": "Cloud & DevOps",
+        "items": [
+          "AWS",
+          "Kubernetes",
+          "Docker",
+          "Linux",
+          "GitHub Actions"
+        ]
+      },
+      {
+        "name": "Data",
+        "items": [
+          "PostgreSQL",
+          "MongoDB",
+          "Redis",
+          "MySQL",
+          "Kafka"
+        ]
+      }
     ],
     "languagesTitle": "Spoken languages",
     "languages": [
-      { "name": "Arabic", "level": "Native" },
-      { "name": "English", "level": "Professional" }
+      {
+        "name": "Arabic",
+        "level": "Native"
+      },
+      {
+        "name": "English",
+        "level": "Professional"
+      }
     ]
   },
   "contact": {
@@ -127,7 +248,10 @@
     "linkedinLabel": "LinkedIn",
     "upworkLabel": "Upwork",
     "basedLabel": "Based in",
-    "location": "Gaza, Palestine"
+    "location": "Gaza, Palestine",
+    "phoneLabel": "Phone",
+    "whatsappLabel": "WhatsApp",
+    "whatsappMessage": "Hi Said, I saw your portfolio and I'd like to talk about a project."
   },
   "footer": {
     "rights": "All rights reserved.",

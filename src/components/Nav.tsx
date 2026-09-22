@@ -12,11 +12,14 @@ import { useTranslation } from 'react-i18next'
 import { palette, line, fonts } from '../theme'
 import { profile, sections } from '../config'
 import LanguageSwitcher from './LanguageSwitcher'
+import WhatsAppIcon from '@mui/icons-material/WhatsApp'
+import { useWhatsAppHref } from '../useWhatsApp'
 
 export default function Nav() {
   const { t, i18n } = useTranslation()
   const [solid, setSolid] = useState(false)
   const [open, setOpen] = useState(false)
+  const whatsapp = useWhatsAppHref()
   const isRtl = i18n.dir(i18n.resolvedLanguage ?? i18n.language) === 'rtl'
 
   useEffect(() => {
@@ -174,6 +177,16 @@ export default function Nav() {
           <Box sx={{ flexGrow: 1 }} />
 
           <Stack spacing={2} sx={{ pt: 4, borderTop: '1px solid', borderColor: line.soft }}>
+            <Link
+              href={whatsapp}
+              target="_blank"
+              rel="noopener noreferrer"
+              underline="hover"
+              sx={{ color: palette.signal, fontFamily: fonts.mono, fontSize: 13, display: 'inline-flex', alignItems: 'center', gap: 1 }}
+            >
+              <WhatsAppIcon sx={{ fontSize: 17 }} />
+              {t('contact.whatsappLabel')}
+            </Link>
             <Link
               href={`mailto:${profile.email}`}
               underline="hover"

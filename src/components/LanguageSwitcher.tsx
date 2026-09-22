@@ -1,7 +1,7 @@
 import Button from '@mui/material/Button'
 import { alpha } from '@mui/material/styles'
 import { useTranslation } from 'react-i18next'
-import { palette } from '../theme'
+import { palette, fonts } from '../theme'
 import { supportedLngs } from '../i18n'
 
 export default function LanguageSwitcher({ fullWidth = false }: { fullWidth?: boolean }) {
@@ -23,7 +23,9 @@ export default function LanguageSwitcher({ fullWidth = false }: { fullWidth?: bo
         border: '1px solid',
         borderColor: alpha(palette.signal, 0.45),
         color: palette.signal,
+        fontFamily: fonts.mono,
         fontSize: 12.5,
+        letterSpacing: '0.08em',
         lineHeight: 1.7,
         '&:hover': { bgcolor: palette.signal, color: palette.base, borderColor: palette.signal },
       }}

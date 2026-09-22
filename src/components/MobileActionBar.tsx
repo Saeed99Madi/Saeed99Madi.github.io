@@ -2,11 +2,12 @@ import { useEffect, useState } from 'react'
 import Box from '@mui/material/Box'
 import Link from '@mui/material/Link'
 import MailIcon from '@mui/icons-material/MailOutlineRounded'
-import GitHubIcon from '@mui/icons-material/GitHub'
+import WhatsAppIcon from '@mui/icons-material/WhatsApp'
 import { useTranslation } from 'react-i18next'
 import { palette, line, fonts } from '../theme'
 import { profile } from '../config'
 import { useDevice } from '../hooks/useDevice'
+import { useWhatsAppHref } from '../useWhatsApp'
 
 /**
  * Touch-only: a thumb-reachable action bar that appears once the hero (which
@@ -17,6 +18,7 @@ export default function MobileActionBar() {
   const { t, i18n } = useTranslation()
   const { isPhone, isTouch } = useDevice()
   const [shown, setShown] = useState(false)
+  const whatsapp = useWhatsAppHref()
   const isRtl = i18n.dir(i18n.resolvedLanguage ?? i18n.language) === 'rtl'
 
   useEffect(() => {
@@ -56,19 +58,19 @@ export default function MobileActionBar() {
         transition: 'transform .4s cubic-bezier(.16,1,.3,1)',
       }}
     >
-      <Link href={`mailto:${profile.email}`} underline="none" sx={{ ...item, bgcolor: palette.signal, color: palette.base }}>
-        <MailIcon sx={{ fontSize: 18 }} />
-        {t('contact.emailLabel')}
-      </Link>
       <Link
-        href={profile.github}
+        href={whatsapp}
         target="_blank"
         rel="noopener noreferrer"
         underline="none"
-        sx={{ ...item, color: palette.paper }}
+        sx={{ ...item, bgcolor: palette.signal, color: palette.base }}
       >
-        <GitHubIcon sx={{ fontSize: 18 }} />
-        {t('contact.githubLabel')}
+        <WhatsAppIcon sx={{ fontSize: 19 }} />
+        {t('contact.whatsappLabel')}
+      </Link>
+      <Link href={`mailto:${profile.email}`} underline="none" sx={{ ...item, color: palette.paper }}>
+        <MailIcon sx={{ fontSize: 18 }} />
+        {t('contact.emailLabel')}
       </Link>
     </Box>
   )

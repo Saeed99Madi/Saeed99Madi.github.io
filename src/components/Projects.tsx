@@ -78,7 +78,7 @@ export default function Projects() {
                         </Typography>
                       </Stack>
                     ) : null}
-                    <Typography sx={{ fontFamily: fonts.mono, fontSize: 12.5, color: palette.faint }}>
+                    <Typography sx={{ fontFamily: fonts.mono, fontSize: 12.5, color: palette.faint, whiteSpace: 'nowrap' }}>
                       {item.year}
                     </Typography>
                   </Stack>
@@ -97,24 +97,6 @@ export default function Projects() {
                   spacing={2.5}
                   sx={{ mt: 2.5, pt: 2, borderTop: '1px solid', borderColor: line.soft, flexWrap: 'wrap' }}
                 >
-                  <Link
-                    href={links.repo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    underline="hover"
-                    sx={{
-                      display: 'inline-flex',
-                      alignItems: 'center',
-                      gap: 0.5,
-                      color: palette.paper,
-                      fontFamily: isRtl ? fonts.arabic : fonts.mono,
-                      fontSize: 12.5,
-                    }}
-                  >
-                    {t('projects.viewLabel')}
-                    {/* The arrow points away from the text in both directions. */}
-                    <ArrowIcon sx={{ fontSize: 14, transform: isRtl ? 'scaleX(-1)' : 'none' }} />
-                  </Link>
                   {links.live ? (
                     <Link
                       href={links.live}
@@ -131,6 +113,26 @@ export default function Projects() {
                       }}
                     >
                       {t('projects.liveLabel')}
+                      {/* The arrow points away from the text in both directions. */}
+                      <ArrowIcon sx={{ fontSize: 14, transform: isRtl ? 'scaleX(-1)' : 'none' }} />
+                    </Link>
+                  ) : null}
+                  {links.repo ? (
+                    <Link
+                      href={links.repo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      underline="hover"
+                      sx={{
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: 0.5,
+                        color: palette.muted,
+                        fontFamily: isRtl ? fonts.arabic : fonts.mono,
+                        fontSize: 12.5,
+                      }}
+                    >
+                      {t('projects.viewLabel')}
                       <ArrowIcon sx={{ fontSize: 14, transform: isRtl ? 'scaleX(-1)' : 'none' }} />
                     </Link>
                   ) : null}
