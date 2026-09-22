@@ -36,6 +36,13 @@ function Photo({
   onOpen: () => void
   span?: boolean
 }) {
+  // Roughly how tall we are willing to let one photo stand, in px.
+  const MAX_RENDER_HEIGHT = 620
+  // Anything squarer than 5:4 gets held back — a full-width square runs to
+  // over 1000px tall on a desktop column and swallows the chapter.
+  const isTall = image.height / image.width > 0.8
+  const maxWidth = isTall ? Math.round((MAX_RENDER_HEIGHT * image.width) / image.height) : undefined
+
   return (
     <Box
       onClick={onOpen}
@@ -57,6 +64,11 @@ function Photo({
         bgcolor: palette.surface,
         cursor: 'zoom-in',
         lineHeight: 0,
+        // A tall photo is held back by its WIDTH rather than cropped by its
+        // height, so the whole frame is always visible — faces included —
+        // while a 9:19 phone shot still cannot dominate the page.
+        maxWidth: maxWidth ? { xs: '100%', sm: maxWidth } : undefined,
+        mx: maxWidth ? 'auto' : undefined,
         transition: 'border-color .4s ease, transform .5s cubic-bezier(.16,1,.3,1)',
         '&:focus-visible': { outline: `2px solid ${palette.signal}`, outlineOffset: 3 },
         '@media (hover: hover)': {
@@ -77,10 +89,6 @@ function Photo({
           display: 'block',
           width: '100%',
           height: 'auto',
-          // Very tall phone shots would otherwise dominate the page.
-          maxHeight: { xs: 460, md: 560 },
-          objectFit: 'cover',
-          objectPosition: 'center',
           transition: 'transform .6s cubic-bezier(.16,1,.3,1), filter .4s ease',
         }}
       />
