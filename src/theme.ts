@@ -25,8 +25,6 @@ export const palette = {
   /** The single accent. Rules, kickers, one CTA — kept rare so it still means something. */
   signal: '#E9A23B',
   signalDeep: '#C8821F',
-  /** Status dot for "available". */
-  live: '#4ADE80',
 } as const
 
 export const line = {

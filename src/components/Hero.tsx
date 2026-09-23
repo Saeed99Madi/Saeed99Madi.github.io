@@ -82,26 +82,12 @@ export default function Hero() {
         >
           <Box sx={{ order: { xs: 2, md: 1 } }}>
             <MotionBox {...rise(0.05, reduced)}>
-              <Stack direction="row" spacing={1.25} sx={{ alignItems: 'center', flexWrap: 'wrap', rowGap: 1, mb: { xs: 1.5, md: 2.5 } }}>
-                <Box
-                  sx={{
-                    width: 7,
-                    height: 7,
-                    borderRadius: '50%',
-                    bgcolor: palette.live,
-                    boxShadow: `0 0 0 4px ${alpha(palette.live, 0.16)}`,
-                    flexShrink: 0,
-                  }}
-                />
-                <Typography variant="overline" sx={{ color: palette.live, whiteSpace: 'nowrap' }}>
-                  {t('hero.available')}
-                </Typography>
-                {/* '1px', not 1: MUI's sizing system reads a bare 1 as 100%. */}
-                <Box sx={{ width: '1px', height: 12, bgcolor: line.medium, flexShrink: 0 }} />
-                <Typography variant="overline" sx={{ color: palette.muted, whiteSpace: 'nowrap' }}>
-                  {t('hero.location')}
-                </Typography>
-              </Stack>
+              <Typography
+                variant="overline"
+                sx={{ color: palette.muted, whiteSpace: 'nowrap', display: 'block', mb: { xs: 1.5, md: 2.5 } }}
+              >
+                {t('hero.location')}
+              </Typography>
             </MotionBox>
 
             <MotionBox {...rise(0.13, reduced)}>
