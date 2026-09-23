@@ -2,6 +2,7 @@ import { dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import react from '@vitejs/plugin-react'
 import { defineConfig, loadEnv } from 'vite'
+import { seoFallback } from './scripts/seo-fallback.ts'
 import { siteFiles } from './scripts/site-files.ts'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
@@ -22,7 +23,11 @@ export default defineConfig(({ command, mode }) => {
     // GitHub Pages project sites serve from /<repo>/; org sites and custom
     // domains serve from the root. Set BASE_PATH accordingly.
     base: command === 'build' ? (env.BASE_PATH ?? '/') : '/',
-    plugins: [react(), siteFiles({ siteUrl, languages: ['en', 'ar'], paths: ['', 'life/'] })],
+    plugins: [
+      react(),
+      seoFallback({ siteUrl, languages: ['en', 'ar'] }),
+      siteFiles({ siteUrl, languages: ['en', 'ar'], paths: ['', 'life/'] }),
+    ],
     build: {
       rollupOptions: {
         // Two pages: the portfolio at / and the Life timeline at /life/.
