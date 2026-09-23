@@ -109,7 +109,9 @@ ${stack}
   <a href="tel:+970599266293">+970 599 266 293</a> ·
   <a href="https://github.com/Saeed99Madi">GitHub</a> ·
   <a href="https://www.linkedin.com/in/saedmadi/">LinkedIn</a> ·
-  <a href="https://www.upwork.com/freelancers/saidmadi1">Upwork</a>
+  <a href="https://www.upwork.com/freelancers/~01761b751cf50bf51d">Upwork</a> ·
+  <a href="https://www.instagram.com/said.madi.99">Instagram</a> ·
+  <a href="https://www.facebook.com/saed.madi.94">Facebook</a>
 </p>
 <p><a href="./life/">Life — the road here</a></p>`
 }

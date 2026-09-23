@@ -15,6 +15,11 @@ export const profile = {
   githubHandle: 'Saeed99Madi',
   linkedin: 'https://www.linkedin.com/in/saedmadi/',
   upwork: 'https://www.upwork.com/freelancers/~01761b751cf50bf51d',
+  // Canonical profile URLs. The links he sent carried a share token
+  // (?stkn=…) and a /share/ redirect id — both are per-session and tied to
+  // his own account, so neither belongs in a public page.
+  instagram: 'https://www.instagram.com/said.madi.99',
+  facebook: 'https://www.facebook.com/saed.madi.94',
   // Imported, not a string path: Vite hashes it for cache-busting and prefixes
   // the deploy base. A literal '/portrait.jpg' 404s under a base path.
   portrait,

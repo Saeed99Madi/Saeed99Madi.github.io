@@ -7,6 +7,8 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp'
 import GitHubIcon from '@mui/icons-material/GitHub'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import WorkIcon from '@mui/icons-material/WorkOutlineRounded'
+import InstagramIcon from '@mui/icons-material/Instagram'
+import FacebookIcon from '@mui/icons-material/Facebook'
 import ArrowIcon from '@mui/icons-material/ArrowOutwardRounded'
 import { useTranslation } from 'react-i18next'
 import { palette, line, fonts, scale } from '../theme'
@@ -25,6 +27,8 @@ export default function Contact() {
     { label: t('contact.githubLabel'), href: profile.github, icon: <GitHubIcon sx={{ fontSize: 18 }} /> },
     { label: t('contact.linkedinLabel'), href: profile.linkedin, icon: <LinkedInIcon sx={{ fontSize: 18 }} /> },
     { label: t('contact.upworkLabel'), href: profile.upwork, icon: <WorkIcon sx={{ fontSize: 18 }} /> },
+    { label: t('contact.instagramLabel'), href: profile.instagram, icon: <InstagramIcon sx={{ fontSize: 18 }} /> },
+    { label: t('contact.facebookLabel'), href: profile.facebook, icon: <FacebookIcon sx={{ fontSize: 18 }} /> },
   ]
 
   return (
@@ -63,7 +67,10 @@ export default function Contact() {
               '&:hover': { bgcolor: palette.signalDeep },
             }}
           >
-            {t('contact.whatsappLabel')} · {profile.phone}
+            {t('contact.whatsappLabel')} ·{' '}
+            <Box component="span" dir="ltr">
+              {profile.phone}
+            </Box>
           </Button>
         </Box>
       </Reveal>
@@ -135,10 +142,16 @@ export default function Contact() {
             <Typography variant="overline" sx={{ color: palette.faint, display: 'block', mb: 0.8 }}>
               {t('contact.phoneLabel')}
             </Typography>
+            {/* dir as an attribute, not `direction` in sx: stylis-plugin-rtl
+                rewrites the CSS declaration to rtl along with everything else
+                it mirrors, so the number came out as "293 266 599 970+". The
+                attribute also isolates the run, which the CSS property alone
+                does not. */}
             <Link
+              dir="ltr"
               href={`tel:${profile.phoneHref}`}
               underline="hover"
-              sx={{ color: palette.paper, fontFamily: fonts.mono, fontSize: 14, direction: 'ltr', display: 'inline-block' }}
+              sx={{ color: palette.paper, fontFamily: fonts.mono, fontSize: 14, display: 'inline-block' }}
             >
               {profile.phone}
             </Link>
