@@ -44,7 +44,7 @@ Recent work you can open in a browser:
 What I work with:
 Python, TypeScript, JavaScript · React, Next.js · FastAPI, Node.js, NestJS · Kubernetes, Docker, AWS, GCP · PostgreSQL, MongoDB, Redis, Kafka
 
-I also mentor developers through Gaza Sky Geeks and run front-end training, in cohorts and one to one. Teaching keeps me honest: you cannot hand-wave an explanation to someone who is about to write the code.
+For years I also mentored developers through Gaza Sky Geeks and ran front-end training, in cohorts and one to one. Teaching kept me honest: you cannot hand-wave an explanation to someone who is about to write the code.
 
 I'm based in Gaza, Palestine, and work remotely with distributed teams. Building from here has made me pragmatic about constraints — unreliable power and connectivity are a good teacher for writing resilient systems.
 
@@ -81,11 +81,11 @@ renderforge.ai
 Next.js · TypeScript · PostgreSQL · AWS · GCP · Kubernetes · Blender
 ```
 
-**Gaza Sky Geeks — Mentor & Trainer** (2019 – Present)
+**Gaza Sky Geeks — Mentor & Trainer** (2019 – 2024)
 ```
-Teaching web development fundamentals, React and Next.js through cohort programmes and one-to-one sessions.
+Taught web development fundamentals, React and Next.js through cohort programmes and one-to-one sessions.
 ```
-→ Adjust the start year if 2019 is wrong; I took it from your GitHub join date.
+→ Ended 2024. Adjust the start year if 2019 is wrong; I took it from your GitHub join date.
 
 ---
 

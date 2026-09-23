@@ -37,7 +37,7 @@
     "title": "Engineering from Gaza, for teams anywhere.",
     "paragraphs": [
       "I am a software engineer working across the whole stack: the product surface people touch, the services behind it, and the cloud it runs on. Most of my current work is AI-native — LLM orchestration, retrieval, and the unglamorous plumbing that makes a model useful inside a real enterprise system.",
-      "I work remotely with distributed teams and consult for clients across the US, and I have spent years teaching what I know — mentoring developers through Gaza Sky Geeks and running front-end training. Building from Gaza has made me pragmatic about constraints: unreliable power and connectivity are a good teacher for writing resilient systems."
+      "I work remotely with distributed teams and consult for clients across the US. For years I also taught what I know — mentoring developers through Gaza Sky Geeks and running front-end training. Building from Gaza has made me pragmatic about constraints: unreliable power and connectivity are a good teacher for writing resilient systems."
     ],
     "stats": [
       {
@@ -96,11 +96,11 @@
         ]
       },
       {
-        "period": "2019 — Present",
+        "period": "2019 — 2024",
         "title": "Mentor & Trainer",
         "org": "Gaza Sky Geeks · IEEE Club",
         "meta": "Community",
-        "note": "Teaching web development fundamentals, React and Next.js — through cohort programmes and one-to-one sessions.",
+        "note": "Taught web development fundamentals, React and Next.js — through cohort programmes and one-to-one sessions.",
         "stack": [
           "React",
           "Next.js",
