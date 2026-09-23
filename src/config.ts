@@ -24,17 +24,15 @@ export const profile = {
  * Live URLs, public repositories and star counts for the projects section,
  * paired positionally with projects.items in the locale files.
  *
- * Client work has no public repository, so `repo` is null there; older
- * exercises have no live site, so `live` is null. The card renders whichever
- * links exist. Stars were accurate on 2026-09-22.
+ * Client work has no public repository, so `repo` is null there. The card
+ * renders whichever links exist, and shows a star count only when it is
+ * above zero. Stars were accurate on 2026-09-22.
  */
 export const projectLinks: { live: string | null; repo: string | null; stars: number }[] = [
   { live: 'https://renderforge.ai/', repo: null, stars: 0 },
   { live: 'https://peace-seekers.com/', repo: 'https://github.com/Saeed99Madi/peace-seeker', stars: 0 },
   { live: 'https://www.planundvolt.de/', repo: null, stars: 0 },
   { live: 'https://value-studio.com/', repo: null, stars: 0 },
-  { live: null, repo: 'https://github.com/Saeed99Madi/MSS-E-Commarce', stars: 24 },
-  { live: 'https://next-js-chat-gpt-typescript.vercel.app', repo: 'https://github.com/Saeed99Madi/NextJS-ChatGpt-Typescript', stars: 5 },
 ]
 
 export const sections = ['about', 'work', 'projects', 'contact'] as const

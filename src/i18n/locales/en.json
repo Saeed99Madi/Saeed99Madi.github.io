@@ -96,6 +96,27 @@
         ]
       },
       {
+        "period": "Apr 2024 — Aug 2024",
+        "title": "Front-End JavaScript Developer",
+        "org": "CIPHER",
+        "meta": "Full-time · Remote — Jordan",
+        "note": "Digital security software company. Led front-end development of the Cipher portal web application and website.",
+        "bullets": [
+          "Led front-end development of the portal application and site with Node.js, React and Next.js.",
+          "Built the interface and authentication logic, focused on the interaction detail.",
+          "Ensured compatibility with DigitalOcean cloud services.",
+          "Wrote tests with Jest and integrated CI/CD."
+        ],
+        "stack": [
+          "Next.js",
+          "React",
+          "Node.js",
+          "Jest",
+          "DigitalOcean",
+          "CI/CD"
+        ]
+      },
+      {
         "period": "2019 — 2024",
         "title": "Mentor & Trainer",
         "org": "Gaza Sky Geeks · IEEE Club",
@@ -106,6 +127,28 @@
           "Next.js",
           "JavaScript",
           "TypeScript"
+        ]
+      },
+      {
+        "period": "Dec 2022 — Feb 2023",
+        "title": "Full-Stack JavaScript Developer",
+        "org": "InterX Labs Pte. Ltd.",
+        "meta": "Full-time · Remote — Singapore",
+        "note": "Led development of a dynamic web application, front to back.",
+        "bullets": [
+          "Led development with Node.js, Express, React and Next.js.",
+          "Built the interface and the server-side logic for authentication and database access.",
+          "Deployed on AWS — EC2 for the application, S3 for storage.",
+          "Wrote tests with Jest and integrated CI/CD."
+        ],
+        "stack": [
+          "Next.js",
+          "React",
+          "Node.js",
+          "Express",
+          "AWS EC2",
+          "S3",
+          "Jest"
         ]
       }
     ]
@@ -150,29 +193,6 @@
         "year": "2025",
         "summary": "Site for an architecture and interior design studio, showcasing residential and commercial work.",
         "stack": []
-      },
-      {
-        "name": "MSS E-Commerce",
-        "year": "2023",
-        "summary": "A full e-commerce platform — storefront, admin and API — built end to end in TypeScript.",
-        "stack": [
-          "Next.js",
-          "Express",
-          "React",
-          "TypeScript",
-          "PostgreSQL",
-          "Sequelize"
-        ]
-      },
-      {
-        "name": "Next.js ChatGPT",
-        "year": "2025",
-        "summary": "A minimal AI agent in TypeScript: streaming chat, conversation state, deployed and public.",
-        "stack": [
-          "Next.js",
-          "TypeScript",
-          "OpenAI API"
-        ]
       }
     ]
   },

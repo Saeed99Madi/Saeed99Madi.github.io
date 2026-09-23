@@ -1,6 +1,7 @@
 import Box from '@mui/material/Box'
 import Stack from '@mui/material/Stack'
 import Typography from '@mui/material/Typography'
+import { alpha } from '@mui/material/styles'
 import { useTranslation } from 'react-i18next'
 import { palette, line, fonts, scale } from '../theme'
 import { useDevice } from '../hooks/useDevice'
@@ -15,6 +16,8 @@ interface Role {
   org: string
   meta: string
   note: string
+  /** Optional specifics. Roles that only need a summary line omit these. */
+  bullets?: string[]
   stack: string[]
 }
 
@@ -25,7 +28,11 @@ function RoleBody({ role }: { role: Role }) {
         <Typography component="h3" sx={{ fontSize: scale.entry, fontWeight: 600, color: palette.paper, m: 0 }}>
           {role.title}
         </Typography>
-        <Typography sx={{ fontFamily: fonts.mono, fontSize: 13, color: palette.signal }}>{role.org}</Typography>
+        {/* Org names are Latin. In Arabic, dir="auto" isolates the run so a
+            trailing "Ltd." keeps its period on the right end, not the left. */}
+        <Typography dir="auto" sx={{ fontFamily: fonts.mono, fontSize: 13, color: palette.signal }}>
+          {role.org}
+        </Typography>
       </Stack>
 
       <Typography variant="overline" sx={{ color: palette.faint, display: 'block', mt: 1 }}>
@@ -33,6 +40,29 @@ function RoleBody({ role }: { role: Role }) {
       </Typography>
 
       <Typography sx={{ color: palette.muted, mt: 1.5, maxWidth: 640 }}>{role.note}</Typography>
+
+      {role.bullets?.length ? (
+        <Box component="ul" sx={{ m: 0, mt: 1.5, pl: 0, listStyle: 'none', display: 'grid', gap: 0.75, maxWidth: 640 }}>
+          {role.bullets.map((b, i) => (
+            <Box
+              key={i}
+              component="li"
+              sx={{
+                display: 'flex',
+                gap: 1.25,
+                color: alpha(palette.paper, 0.72),
+                fontSize: { xs: '0.9rem', md: '0.95rem' },
+                lineHeight: 1.65,
+              }}
+            >
+              <Box component="span" aria-hidden sx={{ color: palette.signal, flexShrink: 0, mt: '1px' }}>
+                —
+              </Box>
+              {b}
+            </Box>
+          ))}
+        </Box>
+      ) : null}
 
       <Stack direction="row" sx={{ flexWrap: 'wrap', gap: 0.75, mt: 2 }}>
         {role.stack.map((s) => (
