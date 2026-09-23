@@ -19,13 +19,15 @@ export default defineConfig(({ command, mode }) => {
   const env = loadEnv(mode, process.cwd(), '')
   const siteUrl = env.VITE_SITE_URL ?? 'http://localhost:5173/'
 
+  const base = command === 'build' ? (env.BASE_PATH ?? '/') : '/'
+
   return {
     // GitHub Pages project sites serve from /<repo>/; org sites and custom
     // domains serve from the root. Set BASE_PATH accordingly.
-    base: command === 'build' ? (env.BASE_PATH ?? '/') : '/',
+    base,
     plugins: [
       react(),
-      seoFallback({ siteUrl, languages: ['en', 'ar'] }),
+      seoFallback({ siteUrl, languages: ['en', 'ar'], base }),
       siteFiles({ siteUrl, languages: ['en', 'ar'], paths: ['', 'life/'] }),
     ],
     build: {

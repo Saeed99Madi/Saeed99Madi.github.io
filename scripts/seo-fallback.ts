@@ -23,7 +23,7 @@ const here = dirname(fileURLToPath(import.meta.url))
  */
 
 interface Locale {
-  hero: { role: string; location: string; headline: string; tags: string[] }
+  hero: { role: string; location: string; headline: string; tags: string[]; portraitAlt: string }
   about: {
     title: string
     paragraphs: string[]
@@ -47,7 +47,7 @@ const esc = (s: string) =>
 
 const list = (items: string[]) => `<ul>${items.map((i) => `<li>${esc(i)}</li>`).join('')}</ul>`
 
-function homeFallback(t: Locale): string {
+function homeFallback(t: Locale, portrait: string | null): string {
   const roles = t.work.roles
     .map(
       (r) => `<article>
@@ -74,7 +74,16 @@ ${r.bullets?.length ? list(r.bullets) : ''}
     .map((g) => `<h3>${esc(g.name)}</h3>${list(g.items)}`)
     .join('\n')
 
+  // The portrait is the only image Google can see without running JavaScript,
+  // and it is the one that matters: a search for the name should return his
+  // face. Intrinsic dimensions are spelled out so Image Search knows the shape
+  // before it fetches the file.
+  const photo = portrait
+    ? `<p><img src="${portrait}" width="900" height="1200" alt="${esc(t.hero.portraitAlt)}" /></p>`
+    : ''
+
   return `<h1>Said Madi — ${esc(t.hero.role)}</h1>
+${photo}
 <p><strong>${esc(t.hero.headline)}</strong></p>
 <p>${esc(t.hero.location)} · ${esc(t.hero.tags.join(' · '))}</p>
 
@@ -116,7 +125,16 @@ ${entries}
 <p><a href="../">Back to the portfolio</a></p>`
 }
 
-export function seoFallback({ siteUrl, languages }: { siteUrl: string; languages: string[] }): Plugin {
+export function seoFallback({
+  siteUrl,
+  languages,
+  base: assetBase,
+}: {
+  siteUrl: string
+  languages: string[]
+  /** Vite's `base`, so the emitted asset paths match the rest of the page. */
+  base: string
+}): Plugin {
   const base = siteUrl.endsWith('/') ? siteUrl : `${siteUrl}/`
   const locale: Locale = JSON.parse(
     readFileSync(resolve(here, '../src/i18n/locales/en.json'), 'utf8'),
@@ -126,11 +144,25 @@ export function seoFallback({ siteUrl, languages }: { siteUrl: string; languages
     name: 'seo-fallback',
     apply: 'build',
     transformIndexHtml: {
-      order: 'pre',
+      // 'post' rather than 'pre' so ctx.bundle is populated: the portrait is
+      // imported as a module, so its final name carries a content hash that
+      // only exists once the bundle is written. The hash is stable across
+      // rebuilds while the file itself is unchanged, which is what Image
+      // Search wants — a URL that does not move under it every deploy.
+      order: 'post',
       handler(html, ctx) {
         const isLife = ctx.path.includes('life/')
         const path = isLife ? 'life/' : ''
-        const body = isLife ? lifeFallback(locale) : homeFallback(locale)
+
+        const portraitFile = Object.keys(ctx.bundle ?? {}).find((f) =>
+          /(^|\/)portrait-[^/]*\.(jpg|jpeg|png|webp|avif)$/.test(f),
+        )
+        const portrait = portraitFile ? `${assetBase}${portraitFile}` : null
+        if (!isLife && !portrait) {
+          this.warn('seo-fallback: portrait asset not found; the fallback will have no image')
+        }
+
+        const body = isLife ? lifeFallback(locale) : homeFallback(locale, portrait)
 
         // hreflang belongs in the head as well as the sitemap: the sitemap is
         // a hint Google may not have crawled yet, the head is authoritative on
@@ -144,6 +176,7 @@ export function seoFallback({ siteUrl, languages }: { siteUrl: string; languages
 
         return html
           .replace('<!-- SEO_FALLBACK -->', body)
+          .replace('%PORTRAIT_URL%', portrait ? `${base}${portrait.replace(/^\//, '')}` : `${base}og.png`)
           .replace('</head>', `${alternates}\n  </head>`)
       },
     },
