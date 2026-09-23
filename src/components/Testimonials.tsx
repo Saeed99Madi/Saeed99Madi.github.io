@@ -7,7 +7,7 @@ import VerifiedIcon from '@mui/icons-material/VerifiedRounded'
 import ArrowIcon from '@mui/icons-material/ArrowOutwardRounded'
 import { alpha } from '@mui/material/styles'
 import { useTranslation } from 'react-i18next'
-import { palette, line, fonts, scale } from '../theme'
+import { palette, line, fonts, scale, monoOrArabic } from '../theme'
 import { testimonials, upworkStats } from '../testimonials'
 import Reveal from './Reveal'
 import Kicker from './Kicker'
@@ -119,7 +119,7 @@ export default function Testimonials() {
                 <Stars />
                 <Stack direction="row" spacing={0.5} sx={{ alignItems: 'center' }}>
                   <VerifiedIcon sx={{ fontSize: 14, color: palette.faint }} />
-                  <Typography sx={{ fontFamily: fonts.mono, fontSize: 10.5, letterSpacing: '0.1em', color: palette.faint }}>
+                  <Typography sx={{ fontFamily: monoOrArabic(isRtl), fontSize: 10.5, letterSpacing: isRtl ? 0 : '0.1em', color: palette.faint }}>
                     {t('testimonials.verified')}
                   </Typography>
                 </Stack>

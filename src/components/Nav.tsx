@@ -9,7 +9,7 @@ import Typography from '@mui/material/Typography'
 import MenuIcon from '@mui/icons-material/MenuRounded'
 import CloseIcon from '@mui/icons-material/CloseRounded'
 import { useTranslation } from 'react-i18next'
-import { palette, line, fonts } from '../theme'
+import { palette, line, fonts, monoOrArabic } from '../theme'
 import { profile, sections, pages } from '../config'
 import LanguageSwitcher from './LanguageSwitcher'
 import WhatsAppIcon from '@mui/icons-material/WhatsApp'
@@ -187,7 +187,7 @@ export default function Nav() {
               target="_blank"
               rel="noopener noreferrer"
               underline="hover"
-              sx={{ color: palette.signal, fontFamily: fonts.mono, fontSize: 13, display: 'inline-flex', alignItems: 'center', gap: 1 }}
+              sx={{ color: palette.signal, fontFamily: monoOrArabic(isRtl), fontSize: 13, display: 'inline-flex', alignItems: 'center', gap: 1 }}
             >
               <WhatsAppIcon sx={{ fontSize: 17 }} />
               {t('contact.whatsappLabel')}

@@ -45,6 +45,17 @@ const mono = "'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, monospace"
 
 export const fonts = { sans, arabic, mono }
 
+/**
+ * Mono for Latin, the Arabic sans for Arabic.
+ *
+ * IBM Plex Mono carries no Arabic glyphs, so Arabic set in it falls back to
+ * some monospace face on the device — and monospacing Arabic breaks the
+ * cursive joining, rendering "اللغة الأم" as separated stubs. Any label that
+ * can hold translated text has to go through here; `fonts.mono` on its own is
+ * only safe for strings that are always Latin, like a tech name or a year.
+ */
+export const monoOrArabic = (isRtl: boolean) => (isRtl ? arabic : mono)
+
 /** Fluid type ramp — one source of truth for every oversized heading. */
 export const scale = {
   hero: 'clamp(2.75rem, 9vw, 6.5rem)',

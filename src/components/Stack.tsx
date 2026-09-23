@@ -4,7 +4,7 @@ import Typography from '@mui/material/Typography'
 import { motion, useReducedMotion } from 'framer-motion'
 import { alpha } from '@mui/material/styles'
 import { useTranslation } from 'react-i18next'
-import { palette, line, fonts, scale, easing } from '../theme'
+import { palette, line, scale, easing, monoOrArabic } from '../theme'
 import Reveal from './Reveal'
 import Kicker from './Kicker'
 import Section from './Section'
@@ -14,7 +14,8 @@ import Chip from './Chip'
 const LANGUAGE_LEVELS = [100, 85]
 
 export default function TechStack() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
+  const isRtl = i18n.dir(i18n.resolvedLanguage ?? i18n.language) === 'rtl'
   const reduced = useReducedMotion()
   const groups = t('stack.groups', { returnObjects: true })
   const languages = t('stack.languages', { returnObjects: true })
@@ -76,24 +77,34 @@ export default function TechStack() {
                   <Box key={l.name}>
                     <MuiStack direction="row" sx={{ justifyContent: 'space-between', alignItems: 'baseline', gap: 1.5, mb: 1 }}>
                       <Typography sx={{ fontWeight: 600, color: palette.paper }}>{l.name}</Typography>
-                      <Typography sx={{ fontFamily: fonts.mono, fontSize: 11.5, color: palette.faint }}>
+                      <Typography sx={{ fontFamily: monoOrArabic(isRtl), fontSize: 11.5, color: palette.faint }}>
                         {l.level}
                       </Typography>
                     </MuiStack>
+                    {/* The track is what gets watched, not the bar.
+                        The bar starts at width 0, so its box has no area, and
+                        a bare '-10%' viewport margin insets the observer root
+                        horizontally as well as vertically — on a phone that
+                        pushed the zero-width bar outside the inset root, the
+                        observer never fired and the bars sat empty. The track
+                        always has width, and the margin is now vertical only.
+                        The fill rides along as a variant. */}
                     <Box
+                      component={motion.div}
                       role="meter"
                       aria-label={l.name}
                       aria-valuenow={value}
                       aria-valuemin={0}
                       aria-valuemax={100}
                       aria-valuetext={l.level}
+                      initial={reduced ? 'shown' : 'hidden'}
+                      whileInView="shown"
+                      viewport={{ once: true, margin: '0px 0px -10% 0px' }}
                       sx={{ height: 6, bgcolor: alpha(palette.paper, 0.1), borderRadius: 999, overflow: 'hidden' }}
                     >
                       <Box
                         component={motion.div}
-                        initial={{ width: reduced ? `${value}%` : 0 }}
-                        whileInView={{ width: `${value}%` }}
-                        viewport={{ once: true, margin: '-10%' }}
+                        variants={{ hidden: { width: 0 }, shown: { width: `${value}%` } }}
                         transition={{ duration: 1, delay: 0.1 + i * 0.12, ease: easing }}
                         sx={{ height: '100%', bgcolor: palette.signal, borderRadius: 999 }}
                       />

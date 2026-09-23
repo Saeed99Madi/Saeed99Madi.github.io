@@ -6,7 +6,7 @@ import StarIcon from '@mui/icons-material/StarRounded'
 import ArrowIcon from '@mui/icons-material/ArrowOutwardRounded'
 import { alpha } from '@mui/material/styles'
 import { useTranslation } from 'react-i18next'
-import { palette, line, fonts, scale } from '../theme'
+import { palette, line, fonts, scale, monoOrArabic } from '../theme'
 import { projectLinks } from '../config'
 import Reveal from './Reveal'
 import Kicker from './Kicker'
@@ -78,7 +78,7 @@ export default function Projects() {
                         </Typography>
                       </Stack>
                     ) : null}
-                    <Typography sx={{ fontFamily: fonts.mono, fontSize: 12.5, color: palette.faint, whiteSpace: 'nowrap' }}>
+                    <Typography sx={{ fontFamily: monoOrArabic(isRtl), fontSize: 12.5, color: palette.faint, whiteSpace: 'nowrap' }}>
                       {item.year}
                     </Typography>
                   </Stack>
