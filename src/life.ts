@@ -14,6 +14,7 @@ import gsgCorridor from './assets/life/gsg-corridor.jpg'
 import gsgCoffeeTable from './assets/life/gsg-coffee-table.jpg'
 import gsgDesks from './assets/life/gsg-desks.jpg'
 import gsgBeachDay from './assets/life/gsg-beach-day.jpg'
+import gsgHubSelfie from './assets/life/gsg-hub-selfie.jpg'
 import metaforeTeam from './assets/life/metafore-team.jpg'
 
 /**
@@ -64,6 +65,7 @@ export const lifeEntries: LifeEntry[] = [
       { src: gsgCoffeeTable, width: 1079, height: 850 },
       { src: gsgDesks, width: 762, height: 454 },
       { src: gsgBeachDay, width: 1079, height: 1079 },
+      { src: gsgHubSelfie, width: 720, height: 960 },
     ],
   },
   { images: [{ src: metaforeTeam, width: 1200, height: 900 }], year: '2025' },
